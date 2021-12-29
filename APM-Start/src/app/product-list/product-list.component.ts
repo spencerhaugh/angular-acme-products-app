@@ -8,6 +8,7 @@ import { Component } from "@angular/core";
 export class ProductListComponent {
     pageTitle: string = 'Product List';
     displayImages: boolean = false;
+    listFilter: string = 'cart'
     imageWidth: number = 50;
     imageMargin: number = 2;
     products: any[] = [
