@@ -1,24 +1,22 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { SharedModule } from '../../shared/shared.module';
+
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ConvertToSpacesPipe } from 'src/app/shared/convert-to-spaces.pipe';
-import { StarComponent } from 'src/app/shared/star/star.component';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+
 import { productRoutes } from 'src/app/utils/routes';
 
 @NgModule({
   declarations: [
     ProductListComponent,
     ProductDetailComponent,
-    ConvertToSpacesPipe,
-    StarComponent
+    ConvertToSpacesPipe
   ],
   imports: [
-    CommonModule,
-    FormsModule,
-    RouterModule.forChild(productRoutes)
+    RouterModule.forChild(productRoutes),
+    SharedModule
   ]
 })
 export class ProductModule { }
